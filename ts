@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd ZEZO
-screen -S Tshake -X kill
-screen -S Tshake ./TsAu
+screen -S ZEZO -X kill
+screen -S ZEZO ./TsAu
