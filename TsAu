@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+cd ZEZO
+echo -e "\e[33m                     Z                                        \e[0m"
+echo -e "\e[33m                              E                                 \e[0m"
+echo -e "\e[33m                                      Z                           \e[0m"
+echo -e "\e[33m                                             O                     \e[0m"
+echo -e "\e[33m                                                    ?              |\e[0m"
+while(true) do
+lua start.lua 
+done

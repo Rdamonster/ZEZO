@@ -714,20 +714,20 @@ local stats = https.request(zezo)
 local data = json:decode(stats)
 if (data.result and data.result.status == 'creator') then
 if not database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} معطله سابقا", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 if database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
 database:del( 'zezo:'..bot_id.."charge:"..msg.chat_id_)
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, info.."☑️┇تم تعطيل المجموعه {"..k2.title_.."}", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 database:srem("thsake:gog"..bot_id, msg.chat_id_)
 database:del('zezo:'..bot_id.."charge:"..msg.chat_id_)
-function thsake_info2(k1,k2)
+function zezo_info2(k1,k2)
 function dl_cb222(t1,t2)
 send(tostring((database:get("zezo"..bot_id..":sudo:gr") or sudo_add)), 0, 1, "🔘┇قام بتعطيل مجموعه \n🎫┇ايدي المطور ~⪼ ("..msg.sender_user_id_..")\n📜┇معرف المطور ~⪼ @"..(result.username_ or "لا يوجد").."\n🌐┇معلومات المجموعه \n\n🎫┇ايدي المجموعه ~⪼ ("..msg.chat_id_..")\nⓂ️┇اسم المجموعه ~⪼ ("..k2.title_..")\n📎┇رابط المجموعه ~⪼ ["..(t2.invite_link_ or "Error").."]" , 1, 'html')
 end
@@ -736,7 +736,7 @@ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID
 }, dl_cb222, nil)
 end
-openChat(msg.chat_id_,thsake_info2) 
+openChat(msg.chat_id_,zezo_info2) 
 --
 end
 else
@@ -762,19 +762,19 @@ local data2 = json:decode(stats)
 local zezon = database:get("ts_a"..bot_id) or 1000
 if (data2.result and (tonumber(data2.result) == tonumber(zezon) or tonumber(data2.result) > tonumber(zezon))) then
 if database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} مفعله سابقا", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 if not database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
 database:set( 'zezo:'..bot_id.."charge:"..msg.chat_id_,true)
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, info.."☑️┇تم تفعيل المجموعه {"..(k2.title_ or "").."}", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 database:sadd("thsake:gog"..bot_id, msg.chat_id_)
-function thsake_info2(k1,k2)
+function zezo_info2(k1,k2)
 function dl_cb222(t1,t2)
 if t2.invite_link_ == false then 
 local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_
@@ -792,7 +792,7 @@ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID
 }, dl_cb222, nil)
 end
-openChat(msg.chat_id_,thsake_info2) 
+openChat(msg.chat_id_,zezo_info2) 
 --
 if data.result.can_promote_members  then
 database:sadd('zezo:'..bot_id..'owners:'..msg.chat_id_,msg.sender_user_id_)
@@ -814,20 +814,20 @@ getUser(msg.sender_user_id_, TSby)
 end
 if text == "تفعيل" and is_sudo(msg) then
 function TSby(extra,result,success)
-info = '💬┇بواسطه ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'zezoteam')..')\n'
+info = '💬┇بواسطة* ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'zezoteam')..')\n'
 if database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} مفعله سابقا", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 if not database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
 database:set( 'zezo:'..bot_id.."charge:"..msg.chat_id_,true)
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, info.."☑️┇تم تفعيل المجموعه {"..(k2.title_ or "").."}", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
-function thsake_info2(k1,k2)
+openChat(msg.chat_id_,zezo_info)
+function zezo_info2(k1,k2)
 function dl_cb222(t1,t2)
 if t2.invite_link_ == false then 
 local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_
@@ -845,7 +845,7 @@ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID
 }, dl_cb222, nil)
 end
-openChat(msg.chat_id_,thsake_info2) 
+openChat(msg.chat_id_,zezo_info2) 
 --
 database:sadd("thsake:gog"..bot_id, msg.chat_id_)
 database:set( 'zezo:'..bot_id.."enable:"..msg.chat_id_,true)
@@ -856,20 +856,20 @@ if text == "تعطيل" and is_sudo(msg) then
 function TSby(extra,result,success)
 info = '💬┇بواسطه ~⪼ ['..result.first_name_..'](t.me/'..(result.username_ or 'zezoteam')..')\n'
 if not database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} معطله سابقا", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 if database:get( 'zezo:'..bot_id.."charge:"..msg.chat_id_) then
 database:del( 'zezo:'..bot_id.."charge:"..msg.chat_id_)
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, info.."☑️┇تم تعطيل المجموعه {"..k2.title_.."}", 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 database:srem("thsake:gog"..bot_id, msg.chat_id_)
 --
-function thsake_info2(k1,k2)
+function zezo_info2(k1,k2)
 function dl_cb222(t1,t2)
 if t2.invite_link_ == false then 
 local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_
@@ -887,7 +887,7 @@ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID
 }, dl_cb222, nil)
 end
-openChat(msg.chat_id_,thsake_info2) 
+openChat(msg.chat_id_,zezo_info2) 
 --
 end 
 end
@@ -1876,10 +1876,10 @@ database:setex( 'zezo:'..bot_id.."charge:"..txt[2],timeplan1,true)
 send(msg.chat_id_, msg.id_, 1, '☑┇المجموعه ('..txt[2]..') تم اعادة تفعيلها المدة 30 يوم', 1, 'md')
 send(txt[2], 0, 1, '☑┇تم تفعيل مدة المجموعه 30 يوم', 1, 'md')
 for k,v in pairs(sudo_users) do
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(v, 0, 1, "🔘┇قام بتفعيل مجموعه المده كانت 30 يوم \n🎫┇ايدي المطور ~⪼ ("..msg.sender_user_id_..")\n📜┇معرف المطور ~⪼ "..zezo_info.."\n🌐┇معلومات المجموعه \n\n🎫┇ايدي المجموعه ~⪼ ("..msg.chat_id_..")\nⓂ┇اسم المجموعه ~⪼ ("..k2.title_..")" , 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 database:set( 'zezo:'..bot_id.."enable:"..txt[2],true)
 end
@@ -1895,10 +1895,10 @@ database:setex( 'zezo:'..bot_id.."charge:"..txt[2],timeplan2,true)
 send(msg.chat_id_, msg.id_, 1, '☑┇المجموعه ('..txt[2]..') تم اعادة تفعيلها المدة 90 يوم', 1, 'md')
 send(txt[2], 0, 1, '☑┇تم تفعيل مدة المجموعه 90 يوم', 1, 'md')
 for k,v in pairs(sudo_users) do
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(v, 0, 1, "🔘┇قام بتفعيل مجموعه المده كانت 90 يوم \n🎫┇ايدي المطور ~⪼ ("..msg.sender_user_id_..")\n📜┇معرف المطور ~⪼ "..zezo_info.."\n🌐┇معلومات المجموعه \n\n🎫┇ايدي المجموعه ~⪼ ("..msg.chat_id_..")\nⓂ┇اسم المجموعه ~⪼ ("..k2.title_..")" , 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 database:set( 'zezo:'..bot_id.."enable:"..txt[2],true)
 end
@@ -1913,10 +1913,10 @@ database:set( 'zezo:'..bot_id.."charge:"..txt[2],true)
 send(msg.chat_id_, msg.id_, 1, '☑┇المجموعه ('..txt[2]..') تم اعادة تفعيلها المدة لا نهائية', 1, 'md')
 send(txt[2], 0, 1, '☑┇تم تفعيل مدة المجموعه لا نهائية', 1, 'md')
 for k,v in pairs(sudo_users) do
-function thsake_info(k1,k2)
+function zezo_info(k1,k2)
 send(v, 0, 1, "🔘┇قام بتفعيل مجموعه المده كانت لا نهائية \n🎫┇ايدي المطور ~⪼ ("..msg.sender_user_id_..")\n📜┇معرف المطور ~⪼ "..zezo_info.."\n🌐┇معلومات المجموعه \n\n🎫┇ايدي المجموعه ~⪼ ("..msg.chat_id_..")\nⓂ┇اسم المجموعه ~⪼ ("..k2.title_..")" , 1, 'md')
 end
-openChat(msg.chat_id_,thsake_info)
+openChat(msg.chat_id_,zezo_info)
 end
 database:set( 'zezo:'..bot_id.."enable:"..txt[2],true)
 end
