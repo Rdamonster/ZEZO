@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-sudo ls
+
 cd ..
 cd ZEZO
-rm -rf "luarocks-2.2.2"
-wget "https://valtman.name/files/telegram-cli-1222"
+rm -rf "Tshake.lua"
 reset
 echo -e "\e[38;5;77m     »»     Welcome to install ZEZO     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install ZEZO [97%]     ««\e[0m"
