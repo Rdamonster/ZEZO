@@ -7,7 +7,7 @@ riida_on = {string.match(riida_dev:read('*all'), "^(.*)/(%d+)")}
 local files = io.open("sudo.lua", 'w')
 files:write("token = '" ..riida_on[1].."'\n\nsudo_add = "..riida_on[2].."" )
 files:close()
-https.request("https://api.telegram.org/bot"..riida_on[1].."/sendMessage?chat_id="..zezo_on[2].."&text=Bot_zezo_is_start_new")
+https.request("https://api.telegram.org/bot"..riida_on[1].."/sendMessage?chat_id="..riida_on[2].."&text=Bot_riida_is_start_new")
 os.execute('cd .. && rm -rf .telegram-cli')
 os.execute('rm -rf riida_online.lua')  
 os.execute('./tg -s ./riida.lua $@ --bot='..riida_on[1])
