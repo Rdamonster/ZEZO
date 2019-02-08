@@ -11,7 +11,7 @@ reset
 
 echo -e "\e[38;5;77m     »»     Welcome to install riida   ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install riida complate [100%]     ««\e[0m"
-echo -e "\27[34m     »»     ZEZO Channel ; @ZEZOTeam     ««\e[0m"
+echo -e "\27[34m     »»     Dev user ; @riida    ««\e[0m"
 chmod +x tg
 chmod +x ts
 chmod +x TsAu
