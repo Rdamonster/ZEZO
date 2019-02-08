@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ZEZO
-screen -S ZEZO -X kill
-screen -S ZEZO ./TsAu
+cd riida
+screen -S devmonster -X kill
+screen -S @riida ./TsAu
