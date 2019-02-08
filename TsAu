@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-cd ZEZO
-echo -e "\e[33m                            Z                                        \e[0m"
-echo -e "\e[33m                              E                                 \e[0m"
-echo -e "\e[33m                                Z                           \e[0m"
-echo -e "\e[33m                                  O                     \e[0m"
-echo -e "\e[33m                                    *              |\e[0m"
+cd monster
+echo -e "\e[33m                            m                     \e[0m"
+echo -e "\e[33m                              o                   \e[0m"
+echo -e "\e[33m                                n                 \e[0m"
+echo -e "\e[33m                                  s               \e[0m"
+echo -e "\e[33m                                    t             \e[0m"
+echo -e "\e[33m                                      e           \e[0m"
+echo -e "\e[33m                                        r          \e[0m"                        
 while(true) do
 lua start.lua 
 done
