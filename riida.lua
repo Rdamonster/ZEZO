@@ -1877,7 +1877,7 @@ send(msg.chat_id_, msg.id_, 1, '☑┇تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
 os.execute('cd libs && wget https://raw.githubusercontent.com/Rdamonster/riida/master/libs/utils.lua')
 os.execute('rm -rf Tshake.lua')
-os.execute('wget https://raw.githubusercontent.com/Rdamonster/riida/master/libs/Tshake.lua')
+os.execute('wget https://raw.githubusercontent.com/Rdamonster/riida/master/riida.lua')
 os.exit()
 return false
 end
