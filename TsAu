@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd monster
+cd riida
 echo -e "\e[33m                            m                     \e[0m"
 echo -e "\e[33m                              o                   \e[0m"
 echo -e "\e[33m                                n                 \e[0m"
